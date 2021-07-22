@@ -9717,9 +9717,13 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
   color: white;
 }
 
+a.eng {
+    margin-left: 5rem;    
+}
+
 .resume-social {
-  font-size: 0.875rem;    
-    margin-top: 3em;
+  font-size: 0.875rem;
+margin-top: 2em;
 }
 
 .resume-social .fa-container {
@@ -9747,6 +9751,7 @@ a.theme-btn-on-bg:hover, a.theme-btn-on-bg:focus, a.theme-btn-on-bg:active, .the
   height: 1.5px;
   background: #8d9aad;
 }
+
 
 .resume-section-content {
   color: #58677c;
