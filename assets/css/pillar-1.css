@@ -7586,6 +7586,14 @@ button.bg-dark:focus {
 .mb-2,
 .my-2 {
   margin-bottom: 0.5rem !important;
+    
+}
+
+.contactdata{
+    
+     color: rgba(255,255,255, 0.6);
+    margin-bottom: 0.5rem !important;
+
 }
 
 .ml-2,
