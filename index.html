@@ -1,267 +1,1184 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="es">
+
 <head>
-    <title>CV - Carlos Santamaría</title>
-    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Carlos Santamaría - BI Analyst & Data Scientist">
-    <meta name="author" content="Carlos Santamaría">    
-    <link rel="data science icon" href="ds.png"> 
+
+    <title>Carlos Santamaría | Business Intelligence Analyst & Data Analytics</title>
     
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    
+   <meta
+    name="description"
+    content="Carlos Santamaría, Business Intelligence Analyst especializado en analítica, SQL Server, T-SQL, SSIS, SSAS, Power BI, SSDT y control de versiones de bases de datos."
+    >
+    <meta name="author" content="Carlos Santamaría">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://csantamariaupm.github.io/cv/">
+    <link rel="icon" href="ds.png">
+
+    <!-- Open Graph: LinkedIn, WhatsApp, Facebook y otras plataformas -->
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="CV de Carlos Santamaría">
+    <meta property="og:title" content="Carlos Santamaría | BI Analyst & Data Analytics">
+    <meta
+        property="og:description"
+        content="Especialista en SQL Server, SSIS, SSAS, Power BI, T-SQL y ciclo de vida de bases de datos con SSDT, GitLab y Azure DevOps."
+    >
+    <meta property="og:url" content="https://csantamariaupm.github.io/cv/">
+    <meta
+        property="og:image"
+        content="https://csantamariaupm.github.io/cv/assets/images/profile.jpg"
+    >
+    <meta
+        property="og:image:alt"
+        content="Carlos Santamaría, Business Intelligence Analyst especializado en Data Analytics"
+    >
+    <meta property="profile:first_name" content="Carlos">
+    <meta property="profile:last_name" content="Santamaría">
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carlos Santamaría | BI Analyst & Data Analytics">
+    <meta
+        name="twitter:description"
+        content="Especialista en SQL Server, SSIS, SSAS, Power BI, T-SQL y DevOps aplicado a bases de datos."
+    >
+    <meta
+        name="twitter:image"
+        content="https://csantamariaupm.github.io/cv/assets/images/profile.jpg"
+    >
+    <meta
+        name="twitter:image:alt"
+    content="Carlos Santamaría, Business Intelligence Analyst especializado en Data Analytics"
+    >
+
+    <!-- Datos estructurados para buscadores -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Carlos Santamaría",
+        "url": "https://csantamariaupm.github.io/cv/",
+        "image": "https://csantamariaupm.github.io/cv/assets/images/profile.jpg",
+        "jobTitle": "Business Intelligence Analyst | Data Analytics",
+        "email": "mailto:santamaria.heras@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Madrid",
+            "addressCountry": "ES"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/carlos-santamaria-heras/",
+            "https://github.com/csantamariaUPM"
+        ],
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Universitat Oberta de Catalunya"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Universidad Politécnica de Madrid"
+            }
+        ]
+    }
+    </script>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
+        rel="stylesheet"
+    >
+
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-       
-    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
+
+    <link
+        id="theme-style"
+        rel="stylesheet"
+        href="assets/css/pillar-1.css"
+    >
 
     <style>
+        :root {
+            --cv-accent: #2b547e;
+            --cv-text: #243b53;
+            --cv-muted: #627d98;
+            --cv-tag-bg: #f0f4f8;
+            --cv-tag-border: #d9e2ec;
+        }
+
+        .resume-wrapper-inner {
+            max-width: 1100px;
+        }
+
+        .resume-header .picture {
+            object-fit: cover;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.45rem;
+        }
+
+        .contact-list a,
+        .resume-social a {
+            word-break: break-word;
+        }
+
+        .profile-summary {
+            max-width: 980px;
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        .resume-section {
+            scroll-margin-top: 1rem;
+        }
+
+        .resume-section-title {
+            margin-bottom: 1rem;
+        }
+
+        .resume-timeline-item {
+            padding-bottom: 1.65rem;
+        }
+
+        .resume-timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .resume-position-title {
+            margin: 0;
+        }
+
+        .resume-position-time {
+            color: var(--cv-muted);
+        }
+
+        .company-logo,
+        .education-logo {
+            display: block;
+            width: 90px;
+            max-height: 46px;
+            object-fit: contain;
+        }
+
+        .experience-context {
+            margin-bottom: 0.7rem;
+            color: #52606d;
+            line-height: 1.5;
+        }
+
+        .resume-timeline-item-desc ul {
+            margin-bottom: 0;
+            padding-left: 1.2rem;
+        }
+
+        .resume-timeline-item-desc li {
+            margin-bottom: 0.55rem;
+            line-height: 1.5;
+        }
+
+        .resume-timeline-item-desc li:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-text {
+            color: var(--cv-accent);
+        }
+
+        .skills-grid {
+            margin-bottom: -1rem;
+        }
+
+        .skill-card {
+            height: 100%;
+            margin-bottom: 1rem;
+            padding: 1rem 1rem 0.75rem;
+            border: 1px solid #e4e7eb;
+            border-radius: 6px;
+            background: #fff;
+        }
+
+        .skill-card-title {
+            margin-bottom: 0.8rem;
+            color: #334e68;
+            font-size: 1.02rem;
+            font-weight: 700;
+        }
+
         .tech-tag {
-            font-size: 0.9rem;
-            padding: 5px 10px;
-            margin-right: 5px;
-            margin-bottom: 8px;
             display: inline-block;
-            background-color: #f5f5f5;
-            border: 1px solid #e0e0e0;
+            margin: 0 5px 8px 0;
+            padding: 5px 10px;
+            border: 1px solid var(--cv-tag-border);
             border-radius: 4px;
-            color: #333;
+            background-color: var(--cv-tag-bg);
+            color: var(--cv-text);
+            font-size: 0.87rem;
             font-weight: 500;
         }
+
+        .education-item {
+            position: relative;
+            min-height: 70px;
+            margin-bottom: 1.5rem;
+            padding-right: 115px;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-logo {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .education-title {
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+        }
+
+        .education-institution {
+            margin-bottom: 0.15rem;
+            color: #52606d;
+        }
+
+        .education-date {
+            color: var(--cv-muted);
+            font-size: 0.9rem;
+        }
+
+        .education-project {
+            margin-top: 0.45rem;
+            line-height: 1.5;
+        }
+
+        .compact-list {
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .compact-list li {
+            margin-bottom: 0.55rem;
+            line-height: 1.45;
+        }
+
+        .compact-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            .resume-body {
+                padding: 2rem !important;
+            }
+
+            .company-logo {
+                margin-top: 0.65rem;
+            }
+
+            .education-item {
+                padding-right: 0;
+            }
+
+            .education-logo {
+                position: static;
+                margin-top: 0.75rem;
+            }
+        }
+
+        @media print {
+            @page {
+                margin: 10mm;
+            }
+
+            body {
+                background: #fff;
+            }
+
+            .resume-wrapper-inner {
+                max-width: none;
+                box-shadow: none !important;
+            }
+
+            .resume-body {
+                padding: 1.8rem !important;
+            }
+
+            .resume-section,
+            .resume-timeline-item,
+            .education-item,
+            .skill-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .tech-tag {
+                break-inside: avoid;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
     </style>
+</head>
 
-</head> 
-
-<body>  
+<body>
 
     <article class="resume-wrapper text-center position-relative">
+
         <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+
             <header class="resume-header pt-4 pt-md-0">
+
                 <div class="media flex-column flex-md-row">
-                    <img class="mr-3 img-fluid picture mx-auto" src="assets/images/profile.jpg" alt="">
+
+                    <img
+                        class="mr-3 img-fluid picture mx-auto"
+                        src="assets/images/profile.jpg"
+                        alt="Carlos Santamaría"
+                    >
+
                     <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+
                         <div class="primary-info">
-                            <h1 class="name mt-0 mb-1 text-white text-uppercase">Carlos Santamaría</h1>
-                            <div class="title mb-3">BI Analyst | Data Scientist</div>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="mailto:santamaria.heras@gmail.com"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>santamaria.heras@gmail.com</a></li>
-                                <li class="contactdata"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>+34 687 305 823</li>
-                                <li class="contactdata"><i class="fas fa-map-marker-alt  fa-fw mr-2" data-fa-transform="grow-2"></i>Madrid, Spain</li>
-                            </ul>
-                        </div><div class="secondary-info ml-md-auto mt-2">
-                            <a class="eng" href="https://csantamariaupm.github.io/cv">EN</a>
-                            <ul class="resume-social list-unstyled">
-                                <br><br><br>
-                                <li class="mb-3"><a href="https://www.linkedin.com/in/carlos-santamaria-heras/"><span class="fa-container text-center mr-2"><i class="fab fa-linkedin-in fa-fw"></i></span>Linkedin</a></li>
-                                <li class="mb-3"><a href="https://github.com/csantamariaUPM"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>Github</a></li>
-                                
-                            </ul>
-                        </div></div></div></header>
-            <div class="resume-body p-5">
-                
-                <section class="resume-section summary-section mb-4">
-                    <h2 class="resume-section-title text-uppercase font-weight-bold mb-2">Professional Profile</h2>
-                    <div class="resume-section-content">
-                        <p class="mb-0">
-                            Software Engineer and Data Scientist with a strong background in data architecture and exploitation. Specialized in the full data lifecycle: from <strong>Data Engineering</strong> (complex ETLs with SSIS) to <strong>Strategic Visualization</strong> (Power BI, SSAS). 
-                            <br><br>
-                            I bring a comprehensive vision that bridges technical depth with business needs, ensuring that every technological development translates into a real competitive advantage and the efficient automation of key organizational processes.
-                        </p>
+
+    <h1 class="name mt-0 mb-1 text-white text-uppercase">
+        Carlos Santamaría
+    </h1>
+
+    <div class="title mb-3">
+        Business Intelligence Analyst | Data &amp; Analytics
+    </div>
+
+    <ul class="list-unstyled contact-list">
+
+        <li class="mb-2 d-flex flex-column flex-lg-row align-items-lg-center">
+
+            <a href="mailto:santamaria.heras@gmail.com">                <i
+                    class="far fa-envelope fa-fw mr-2"
+                    data-fa-transform="grow-3"
+                    aria-hidden="true"
+                ></i>santamaria.heras@gmail.com
+            </a>
+
+           
+
+        </li>
+
+        <li class="contactdata mb-1">
+
+            <a href="tel:+34687305823">
+                <i
+                    class="fas fa-mobile-alt fa-fw mr-2"
+                    data-fa-transform="grow-6"
+                    aria-hidden="true"
+                ></i>687 305 823
+            </a>
+
+        </li>
+
+    
+        
+        <li
+         class="list-unstyled contact-list">
+                <a href="https://www.linkedin.com/in/carlos-santamaria-heras/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Perfil de Carlos Santamaría en LinkedIn"
+            >
+                <span class="fa-container text-center mld-2">
+                    <i
+                        class="fab fa-linkedin-in fa-fw"
+                        aria-hidden="true"
+                    ></i>
+                    </span>LinkedIn</a>
+        
+        </li>
+    </ul>
+
+</div>
+
+<div class="secondary-info ml-md-auto mt-3 mt-md-2">
+
+    <a
+        class="eng text-white"
+        href="https://csantamariaupm.github.io/cv"
+        lang="en"
+        aria-label="Ver currículum en inglés"
+    >
+        <strong>EN</strong>
+    </a>
+
+</div>
+                        
+
                     </div>
-                </section><div class="row">
-                    <div class="col-lg-9">                        
-                         <section class="resume-section experience-section mb-4">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold mb-3">Education</h2>
-                            <div class="resume-section-content">
-                                <ul class="list-unstyled">  
-                                    <li class="mb-2">
-                                        <div class="resume-degree font-weight-bold"><i class="fa fa-graduation-cap" aria-hidden="true"></i> 
-                                            <a href="https://www.uoc.edu/portal/es/index.html" class="ml-auto"><img align= "right" border="0" src="assets/images/UOC.png" width="100"></a> 
-                                            Master's Degree in Data Science
-                                        </div>
-                                        <div class="resume-degree-org">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Universitat Oberta de Catalunya</div>
-                                        <div class="resume-degree-time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2022 - 2024 | Average Grade: 8.36/10</div>
-                                    </li>
-                                    
-                                    <li class="mb-2 mt-3">
-                                        <div class="resume-degree font-weight-bold"><i class="fa fa-graduation-cap" aria-hidden="true"></i> 
-                                            <a href="https://www.upm.es/" class="ml-auto"><img align= "right" border="0" src="assets/images/Politecnica.png" width="100"></a> 
-                                            Bachelor's Degree in Software Engineering
-                                        </div>
-                                        <div class="resume-degree-org">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Universidad Politécnica de Madrid</div>
-                                        <div class="resume-degree-time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017 - 2021</div>
-                                        <div class="resume-degree-time mt-1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Final Project Grade: Distinction (10/10)</strong></div>
-                                        <div class="resume-degree-time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="http://oa.upm.es/68230/" class="resume-degree-time">"Solution for the analysis of COVID-19 disease, based on open data" (Power BI).</a>
-                                        </div>
-                                    </li>                                   
-                                </ul>
-                            </div>
-                        </section><section class="resume-section experience-section">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold  mb-4">Work Experience</h2>
-                            <div class="resume-section-content">
-                                <div class="resume-timeline position-relative"> 
-                                     
-                                    <article class="resume-timeline-item position-relative"> 
-                                        <div class="resume-timeline-item-header mb-2">
-                                            <div class=" flex-column flex-md-row">
-                                               <div class="resume-position-title font-weight-bold">Business Intelligence Analyst
-                                                   <a href="https://bienvenido.ges.es/" class="ml-auto">
-                                                       <img align= "right" border="0" src="assets/images/ges.png" width="100"></a>
-                                                    <div class="resume-position-time">&nbsp;May 2023 - Present</div>
-                                                </div>
-                                            </div></div><div class="resume-timeline-item-desc">                                         
-                                            <ul>
-                                                <li class="mb-2"><strong>Key Achievement:</strong> Leadership in technological modernization by designing and implementing <strong>from scratch</strong> version control (GitLab) for all databases using SSDT/Visual Studio, professionalizing the development lifecycle.</li>
-                                                
-                                                <li>Optimization of <strong>T-SQL</strong> queries and stored procedures to improve load process performance.</li>
-                                                <li>Development and implementation of <strong>complex ETL processes</strong> with SQL Server Integration Services <strong>(SSIS)</strong>.</li>
-                                                <li>Management of tabular models and OLAP cubes in SQL Server Analysis Services <strong>(SSAS)</strong>, ensuring data integrity.</li>
-                                                <li>Design of strategic dashboards in <strong>Power BI</strong> for upper management, automating company KPI reporting.</li>
-                                                <li>Integration of heterogeneous data sources for enterprise information consolidation ("Single Source of Truth").</li>
-                                                <li>Continuous data auditing and information quality improvement.</li>
-                                            </ul>   
-                                        </div></article>
 
-                                    <article class="resume-timeline-item position-relative"> 
-                                        <div class="resume-timeline-item-header mb-2">
-                                            <div class=" flex-column flex-md-row">
-                                               <div class="resume-position-title font-weight-bold">Data Analyst
-                                                   <a href="https://www.cognodata.com/" class="ml-auto">
-                                                       <img align= "right" border="0" src="assets/images/Cognodata.png" width="100"></a>
-                                                    <div class="resume-position-time">&nbsp;Sep 2021 - May 2023</div>
-                                                </div>
-                                            </div></div><div class="resume-timeline-item-desc">
-                                            <p>Data consulting for <strong>Banco Santander</strong>. Data quality and regulatory reporting projects:</p>
-                                            <ul>
-                                                <li>Development of robust ETLs with SSIS for large volumes of banking data.</li>
-                                                <li>Scripting and stored procedures in T-SQL with SSMS.</li>
-                                                <li>Implementation of <strong>data quality rules</strong> that reduced errors in regulatory reports.</li>
-                                                <li>Automation of business report generation, reducing manual operational workload.</li>
-                                                <li>Control of batch process execution and resolution of incidents in data loading, ensuring data availability.</li>
-                                            </ul>
-                                        </div></article>
+                </div>
 
-                                   <article class="resume-timeline-item position-relative"> 
-                                        <div class="resume-timeline-item-header mb-2">
-                                            <div class=" flex-column flex-md-row">
-                                               <div class="resume-position-title font-weight-bold">Service Engineer (Internship)
-                                                   <a href="https://www.servalnetworks.com/" class="ml-auto"><img align= "right" border="0" src="assets/images/logo-serval-networks.png" width="100"></a>
-                                                    <div class="resume-position-time">&nbsp;Jan 2021 - Sep 2021 </div>
-                                                </div>
-                                            </div></div><div class="resume-timeline-item-desc">
-                                            <p class="mb-0">Acquisition of a technical foundation in <strong>Cloud infrastructure (AWS)</strong> and networks, understanding the underlying architecture supporting secure data storage and flow (F5, Juniper).</p>
-                                        </div></article>
+            </header>
 
-                                    <div class="mb-3"><hr></div>
-                                    <h5 class="text-muted text-uppercase" style="font-size: 0.9rem;">Previous Experience (Retail & Management)</h5>
+            <main class="resume-body p-4 p-lg-5">
 
-                                    <article class="resume-timeline-item position-relative mb-1"> 
-                                        <div class="resume-timeline-item-header mb-1">
-                                            <div class=" flex-column flex-md-row">
-                                               <div class="resume-position-title font-weight-bold">Supervisor
-                                                   <a href="https://dealz.es/" class="ml-auto"><img align= "right" border="0" src="assets/images/dealz.png" width="80"></a>
-                                                    <div class="resume-position-time">&nbsp;2015 - 2019</div>
-                                                </div>
+                <section
+                    class="resume-section summary-section mb-5"
+                    id="perfil"
+                >
+
+                    <h2 class="resume-section-title text-uppercase font-weight-bold">
+                        Perfil profesional
+                    </h2>
+
+                    <div class="resume-section-content">
+
+                        <p class="profile-summary">
+                            Business Intelligence Analyst especializado en Data Analytics con más de cinco años
+                            de experiencia en proyectos de datos para los sectores asegurador y
+                            bancario. Especializado en <strong>SQL Server, T-SQL, SSIS, SSAS y
+                            Power BI</strong>, con experiencia en el desarrollo y optimización de
+                            procesos ETL, procedimientos almacenados, modelos analíticos y
+                            soluciones de reporting. He impulsado además la implantación del
+                            control de versiones y del ciclo de despliegue de bases de datos
+                            mediante <strong>SSDT, GitLab y Azure DevOps</strong>, conectando las
+                            necesidades de negocio con soluciones técnicas fiables, mantenibles
+                            y orientadas a la calidad del dato.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section
+                    class="resume-section experience-section mb-5"
+                    id="experiencia"
+                >
+
+                    <h2 class="resume-section-title text-uppercase font-weight-bold">
+                        Experiencia profesional
+                    </h2>
+
+                    <div class="resume-section-content">
+
+                        <div class="resume-timeline position-relative">
+
+                            <article class="resume-timeline-item position-relative">
+
+                                <div class="resume-timeline-item-header mb-2">
+
+                                    <div class="d-flex flex-column flex-md-row align-items-md-start">
+
+                                        <div>
+
+                                            <h3 class="resume-position-title font-weight-bold mb-1">
+                                                Business Intelligence Analyst
+                                            </h3>
+
+                                            <div class="resume-position-time">
+                                                Mayo 2023 – Actualidad | GES Seguros |
+                                                Sector asegurador
                                             </div>
-                                        </div>
-                                        <div class="resume-timeline-item-desc">
-                                            <p class="mb-1">- Leadership of multidisciplinary teams (>30 people). Treasury management, stock control, and strategies to increase average ticket value.</p>
-                                        </div>
-                                    </article>
 
-                                    <article class="resume-timeline-item position-relative"> 
-                                        <div class="resume-timeline-item-header">
-                                            <div class="flex-column flex-md-row">
-                                               <div class="resume-position-title font-weight-bold text-muted" style="font-size:0.95rem;">
-                                                   Sales Assistant
-                                                    <span class="resume-position-time ml-2">&nbsp;(Dealz & El Corte Inglés | 2006 - 2015)</span>
-                                                </div>
-                                            </div>
                                         </div>
-                                        <div class="resume-timeline-item-desc">
-                                            <p class="small text-muted">Customer service management, commercial campaigns, and new store openings.</p>
-                                        </div>
-                                    </article>  
-                                
-                                </div><section class="resume-section experience-section mb-4 mt-4">
-                                <h2 class="resume-section-title text-uppercase font-weight-bold mb-3">Tech Stack</h2>
-                                <div class="resume-section-content">
-                                    
-                                    <div class="resume-skill-item mb-4">
-                                        <h4 class="resume-skills-cat font-weight-bold" style="font-size: 1.1rem; color: #444;">Data Engineering & Databases</h4>
-                                        <div class="mt-2">
-                                            <span class="tech-tag">Advanced T-SQL</span>
-                                            <span class="tech-tag">SQL Server (SSMS)</span>
-                                            <span class="tech-tag">SSIS (ETL)</span>
-                                            <span class="tech-tag">SSDT</span>
-                                            <span class="tech-tag">MySQL</span>
-                                            <span class="tech-tag">NoSQL</span>
-                                            <span class="tech-tag">Data Modeling</span>
-                                        </div>
+
+                                        <a
+                                            class="ml-md-auto"
+                                            href="https://bienvenido.ges.es/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                class="company-logo"
+                                                src="assets/images/ges.png"
+                                                alt="GES Seguros"
+                                                loading="lazy"
+                                            >
+                                        </a>
+
                                     </div>
 
-                                    <div class="resume-skill-item mb-4">
-                                        <h4 class="resume-skills-cat font-weight-bold" style="font-size: 1.1rem; color: #444;">Business Intelligence & Visualization</h4>
-                                        <div class="mt-2">
-                                            <span class="tech-tag">Power BI</span>
-                                            <span class="tech-tag">DAX</span>
-                                            <span class="tech-tag">Power Query</span>
-                                            <span class="tech-tag">SSAS (Tabular/Multidimensional)</span>
-                                            <span class="tech-tag">SSRS</span>
-                                            <span class="tech-tag">Reporting Services</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="resume-skill-item mb-4">
-                                        <h4 class="resume-skills-cat font-weight-bold" style="font-size: 1.1rem; color: #444;">Data Science & Programming</h4>
-                                        <div class="mt-2">
-                                            <span class="tech-tag">Python (Pandas, Numpy)</span>
-                                            <span class="tech-tag">R / RStudio</span>
-                                            <span class="tech-tag">Git / Version Control</span>
-                                            <span class="tech-tag">C# (Basic)</span>
-                                            <span class="tech-tag">Java</span>
-                                            <span class="tech-tag">HTML/CSS</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="resume-skill-item">
-                                        <h4 class="resume-skills-cat font-weight-bold" style="font-size: 1.1rem; color: #444;">Methodologies & Soft Skills</h4>
-                                        <div class="mt-2">
-                                            <span class="tech-tag">Agile / Scrum</span>
-                                            <span class="tech-tag">Requirements Gathering</span>
-                                            <span class="tech-tag">Team Leadership</span>
-                                            <span class="tech-tag">Stakeholder Management</span>
-                                            <span class="tech-tag">Business Vision</span>
-                                        </div>
-                                    </div>
-
-                                </div></section><section class="resume-section courses-section">       
-                                <h2 class="resume-section-title text-uppercase font-weight-bold mb-2"><br>Certifications & Courses</h2>
-                                <div class="resume-section-content">
-                                    <ul class="list-unstyled resume-lang-list">
-                                        <li class="mb-2"><a href="#" class="text-dark"><span class="resume-lang-name font-weight-bold">SQL Server Integration Services (SSIS)</span></a> <small class="text-muted font-weight-normal">- Udemy (2022)</small></li>
-                                        <li class="mb-2"><a href="#" class="text-dark"><span class="resume-lang-name font-weight-bold">R Programming</span></a> <small class="text-muted font-weight-normal">- Johns Hopkins University (2021)</small></li>
-                                        <li class="mb-2"><a href="#" class="text-dark"><span class="resume-lang-name font-weight-bold">Microsoft Power BI</span></a> <small class="text-muted font-weight-normal">- Udemy (2021)</small></li>
-                                        <li class="mb-2"><a href="#" class="text-dark"><span class="resume-lang-name font-weight-bold">The Data Scientist’s Toolbox</span></a> <small class="text-muted font-weight-normal">- Johns Hopkins University (2020)</small></li>
-                                        <li class="mb-2"><a href="#" class="text-dark"><span class="resume-lang-name font-weight-bold">Big Data & AI</span></a> <small class="text-muted font-weight-normal">- UPM Summer School (2020)</small></li>
-                                    </ul>
                                 </div>
-                            </section>
 
-                             <section class="resume-section language-section">
-                                    <h2 class="resume-section-title text-uppercase font-weight-bold mb-2"><br>Languages</h2>
-                                    <div class="resume-section-content">
-                                        <ul class="list-unstyled resume-lang-list">
-                                            <li class="mb-2"><span class="resume-lang-name font-weight-bold">Spanish</span> <small class="text-muted font-weight-normal"> - Native</small></li>
-                                            <li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">English</span> <small class="text-muted font-weight-normal"> - B2 First (FCE)</small></li>
-                                        </ul>
+                                <div class="resume-timeline-item-desc">
+
+                                    <p class="experience-context">
+                                        Desarrollo y evolución de soluciones de integración,
+                                        modelado, explotación y gobierno del dato.
+                                    </p>
+
+                                    <ul>
+
+                                        <li>
+                                            <strong>DevOps para bases de datos:</strong>
+                                            diseño e implantación desde cero del control de
+                                            versiones mediante SSDT, Visual Studio y GitLab,
+                                            estableciendo un flujo estructurado de desarrollo,
+                                            revisión y despliegue de cambios de esquema.
+                                        </li>
+
+                                        <li>
+                                            <strong>Data Engineering:</strong>
+                                            desarrollo y mantenimiento de procesos ETL complejos
+                                            con SSIS, integrando información procedente de
+                                            diferentes aplicaciones y sistemas corporativos.
+                                        </li>
+
+                                        <li>
+                                            <strong>SQL y rendimiento:</strong>
+                                            optimización de consultas, procedimientos almacenados
+                                            y procesos batch en T-SQL sobre tablas con grandes
+                                            volúmenes de información.
+                                        </li>
+
+                                        <li>
+                                            <strong>Business Intelligence:</strong>
+                                            gestión de modelos tabulares en SSAS, y diseño de informes y
+                                            cuadros de mando en Power BI para dirección y áreas
+                                            de negocio.
+                                        </li>
+
+                                        <li>
+                                            <strong>Calidad y gobierno del dato:</strong>
+                                            auditoría de información, análisis de incidencias,
+                                            definición de controles y consolidación de fuentes
+                                            heterogéneas para mejorar la trazabilidad y
+                                            consistencia del dato corporativo.
+                                        </li>
+
+                                        <li>
+                                            <strong>Interlocución con negocio:</strong>
+                                            toma de requisitos, definición de reglas funcionales,
+                                            validación de resultados y documentación técnica.
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </article>
+
+                            <article class="resume-timeline-item position-relative">
+
+                                <div class="resume-timeline-item-header mb-2">
+
+                                    <div class="d-flex flex-column flex-md-row align-items-md-start">
+
+                                        <div>
+
+                                            <h3 class="resume-position-title font-weight-bold mb-1">
+                                                Analista de Datos
+                                                <span class="text-muted">| Data Analytics</span>
+                                            </h3>
+
+                                            <div class="resume-position-time">
+                                                Septiembre 2021 – Mayo 2023 | Cognodata
+                                            </div>
+
+                                        </div>
+
+                                        <a
+                                            class="ml-md-auto"
+                                            href="https://www.cognodata.com/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                class="company-logo"
+                                                src="assets/images/Cognodata.png"
+                                                alt="Cognodata"
+                                                loading="lazy"
+                                            >
+                                        </a>
+
                                     </div>
-                             </section></div>
-                    </section></div>
-                
-            </div></div></div>
-    </article>  
+
+                                </div>
+
+                                <div class="resume-timeline-item-desc">
+
+                                    <p class="experience-context">
+                                        Consultoría de datos para el 
+                                        <strong>Banco Santander</strong>
+                                        en proyectos de calidad del dato y reporting regulatorio.
+                                    </p>
+
+                                    <ul>
+
+                                        <li>
+                                            Desarrollo y mantenimiento de procesos ETL con
+                                            <strong>SSIS</strong> para el tratamiento de grandes
+                                            volúmenes de información bancaria.
+                                        </li>
+
+                                        <li>
+                                            Desarrollo de consultas, scripts y procedimientos
+                                            almacenados en <strong>T-SQL y SQL Server</strong>.
+                                        </li>
+
+                                        <li>
+                                            Implementación de reglas de validación y controles de
+                                            calidad para detectar inconsistencias antes de la
+                                            generación de reportes regulatorios.
+                                        </li>
+
+                                        <li>
+                                            Automatización de procesos de reporting y tareas
+                                            operativas, reduciendo intervenciones manuales.
+                                        </li>
+
+                                        <li>
+                                            Supervisión de procesos batch, análisis de errores y
+                                            resolución de incidencias para garantizar la
+                                            disponibilidad de la información en los plazos
+                                            establecidos.
+                                        </li>
+
+                                        <li>
+                                            Elaboración de documentación técnica, evidencias de
+                                            pruebas y validaciones funcionales.
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </article>
+
+                            <article class="resume-timeline-item position-relative">
+
+                                <div class="resume-timeline-item-header mb-2">
+
+                                    <div class="d-flex flex-column flex-md-row align-items-md-start">
+
+                                        <div>
+
+                                            <h3 class="resume-position-title font-weight-bold mb-1">
+                                                Ingeniero de Servicios
+                                                <span class="text-muted">| Cloud y Redes</span>
+                                            </h3>
+
+                                            <div class="resume-position-time">
+                                                Enero 2021 – Septiembre 2021 | Serval Networks
+                                            </div>
+
+                                        </div>
+
+                                        <a
+                                            class="ml-md-auto"
+                                            href="https://www.servalnetworks.com/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img
+                                                class="company-logo"
+                                                src="assets/images/logo-serval-networks.png"
+                                                alt="Serval Networks"
+                                                loading="lazy"
+                                            >
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="resume-timeline-item-desc">
+
+                                    <p class="mb-0 experience-context">
+                                        Soporte e implementación de soluciones de infraestructura,
+                                        redes y servicios tecnológicos con
+                                        <strong>AWS, F5 y Juniper</strong>, desarrollando una base
+                                        técnica en arquitecturas cloud, conectividad y seguridad.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+  <section
+    class="resume-section skills-section mb-4"
+    id="competencias"
+>
+    <h2 class="resume-section-title text-uppercase font-weight-bold mb-3">
+        Stack tecnológico
+    </h2>
+
+    <div class="resume-section-content">
+
+        <div class="row">
+
+            <!-- Data Engineering -->
+            <div class="col-md-6 mb-4">
+
+                <h3
+                    class="font-weight-bold d-flex align-items-center"
+                    style="
+                        margin-bottom: 0.8rem;
+                        color: #434e5e;
+                        font-size: 1.08rem;
+                        line-height: 1.25;
+                    "
+                >
+                    <i
+                        class="fas fa-database mr-2"
+                        style="color: #2b547e; font-size: 1.05rem;"
+                        aria-hidden="true"
+                    ></i>
+
+                    Data Engineering e Integración de Datos
+                </h3>
+
+                <div>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        SQL Server
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        T-SQL
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        SSIS
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        ETL
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        SSMS
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Optimización SQL
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Modelado de datos
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Calidad del dato
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Business Intelligence -->
+            <div class="col-md-6 mb-4">
+
+                <h3
+                    class="font-weight-bold d-flex align-items-center"
+                    style="
+                        margin-bottom: 0.8rem;
+                        color: #434e5e;
+                        font-size: 1.08rem;
+                        line-height: 1.25;
+                    "
+                >
+                    <i
+                        class="fas fa-chart-bar mr-2"
+                        style="color: #2b547e; font-size: 1.05rem;"
+                        aria-hidden="true"
+                    ></i>
+
+                    Business Intelligence
+                </h3>
+
+                <div>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Power BI
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        DAX
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Power Query
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        SSAS Tabular
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        SSRS
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Report Builder
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Diseño de KPIs
+                    </span>
+                    
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Excel avanzado
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- DevOps para bases de datos -->
+            <div class="col-md-6 mb-3">
+
+                <h3
+                    class="font-weight-bold d-flex align-items-center"
+                    style="
+                        margin-bottom: 0.8rem;
+                        color: #434e5e;
+                        font-size: 1.08rem;
+                        line-height: 1.25;
+                    "
+                >
+                    <i
+                        class="fas fa-code-branch mr-2"
+                        style="color: #2b547e; font-size: 1.05rem;"
+                        aria-hidden="true"
+                    ></i>
+
+                    Desarrollo, versionado y despliegue de bases de datos
+                </h3>
+
+                <div>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Visual Studio / SSDT
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        SQL Database Projects
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Git
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        GitLab
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Azure DevOps
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        CI/CD
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Control de versiones
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Despliegue de esquemas
+                    </span>
+
+                </div>
+
+            </div>
+
+                        <!-- Lenguajes de programación -->
+            <div class="col-md-6 mb-3">
+
+                <h3
+                    class="font-weight-bold d-flex align-items-center"
+                    style="
+                        margin-bottom: 0.8rem;
+                        color: #434e5e;
+                        font-size: 1.08rem;
+                        line-height: 1.25;
+                    "
+                >
+                    <i
+                        class="fas fa-code mr-2"
+                        style="color: #2b547e; font-size: 1.05rem;"
+                        aria-hidden="true"
+                    ></i>
+
+                    Lenguajes de programación
+                </h3>
+
+                <div>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Python
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        R
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        Java
+                    </span>
+
+                    <span
+                        class="tech-tag"
+                        style="font-size: 0.78rem; padding: 4px 8px; margin: 0 5px 6px 0;"
+                    >
+                        C
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+                <section
+                    class="resume-section education-section mb-5"
+                    id="formacion"
+                >
+
+                    <h2 class="resume-section-title text-uppercase font-weight-bold">
+                        Formación académica
+                    </h2>
+
+                    <div class="resume-section-content">
+
+                        <article class="education-item">
+
+                            <a
+                                href="https://www.uoc.edu/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    class="education-logo"
+                                    src="assets/images/UOC.png"
+                                    alt="Universitat Oberta de Catalunya"
+                                    loading="lazy"
+                                >
+                            </a>
+
+                            <div class="education-title">
+                                <i class="fas fa-graduation-cap mr-2 highlight-text"></i>
+                                Máster Universitario en Ciencia de Datos
+                            </div>
+
+                            <div class="education-institution">
+                                Universitat Oberta de Catalunya
+                            </div>
+
+                            <div class="education-date">
+                                2022–2024 | Nota media: 8,36
+                            </div>
+
+                        </article>
+
+                        <article class="education-item">
+
+                            <a
+                                href="https://www.upm.es/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    class="education-logo"
+                                    src="assets/images/Politecnica.png"
+                                    alt="Universidad Politécnica de Madrid"
+                                    loading="lazy"
+                                >
+                            </a>
+
+                            <div class="education-title">
+                                <i class="fas fa-graduation-cap mr-2 highlight-text"></i>
+                                Grado en Ingeniería del Software
+                            </div>
+
+                            <div class="education-institution">
+                                Universidad Politécnica de Madrid
+                            </div>
+
+                            <div class="education-date">
+                                2017–2021
+                            </div>
+
+                            <div class="education-project">
+                                <strong>Trabajo de Fin de Grado — Calificación: 10/10.</strong>
+                                <a
+                                    href="https://oa.upm.es/68230/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    “Solución para el análisis de la enfermedad por coronavirus
+                                    (COVID-19), basada en datos abiertos”
+                                </a>,
+                                desarrollada con Power BI.
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+                <section
+                    class="resume-section additional-section"
+                    id="informacion-adicional"
+                >
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4 mb-md-0">
+
+                            <h2 class="resume-section-title text-uppercase font-weight-bold">
+                                Idiomas
+                            </h2>
+
+                            <ul class="compact-list">
+
+                                <li>
+                                    <strong>Español:</strong> nativo
+                                </li>
+
+                                <li>
+                                    <strong>Inglés:</strong>
+                                    B2 First Certificate in English (FCE)
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <h2 class="resume-section-title text-uppercase font-weight-bold">
+                                Formación complementaria
+                            </h2>
+
+                            <ul class="compact-list">
+
+                                <li>
+                                    <strong>SQL Server Integration Services (SSIS)</strong>
+                                    — Udemy, 2022
+                                </li>
+
+                                <li>
+                                    <strong>R Programming</strong>
+                                    — Johns Hopkins University, 2021
+                                </li>
+
+                                <li>
+                                    <strong>Big Data &amp; Artificial Intelligence</strong>
+                                    — UPM Summer School, 2020
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </article>
+
 </body>
+
 </html>
